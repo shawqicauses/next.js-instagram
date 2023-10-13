@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT ⚔️
 /** @type {import('tailwindcss').Config} */
 const f = require("@tailwindcss/forms")
 const lc = require("@tailwindcss/line-clamp")
@@ -38,6 +38,7 @@ module.exports = {
     },
     fontFamily: {
       "poppins": "poppins, sans-serif",
+      "brand": "brand, sans-serif",
       "sans-serif": "sans-serif"
     },
     fontSize: {

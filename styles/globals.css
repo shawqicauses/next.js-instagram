@@ -1,4 +1,4 @@
-/* DONE REVIEWING: GITHUB COMMIT */
+/* DONE REVIEWING: GITHUB COMMIT ⚔️ */
 /* IF: You do not want to use Tailwind */
 /* DELETE: Every @tailwind rule */
 
@@ -6,3 +6,27 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@font-face {
+  font-family: brand;
+  font-weight: 300;
+  src: url("/light.ttf");
+}
+
+@font-face {
+  font-family: brand;
+  font-weight: 400;
+  src: url("/regular.ttf");
+}
+
+@font-face {
+  font-family: brand;
+  font-weight: 700;
+  src: url("/bold.ttf");
+}
+
+@font-face {
+  font-family: brand;
+  font-weight: 900;
+  src: url("/black.ttf");
+}
