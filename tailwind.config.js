@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT ⚔️
+// DONE REVIEWING: GITHUB COMMIT ⚠️
 /** @type {import('tailwindcss').Config} */
 const f = require("@tailwindcss/forms")
 const lc = require("@tailwindcss/line-clamp")
@@ -7,7 +7,8 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./containers/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./helpers/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     screens: {
@@ -37,7 +38,7 @@ module.exports = {
       "max": "max-content"
     },
     fontFamily: {
-      "poppins": "poppins, sans-serif",
+      "ibm-plex-sans-arabic": "IBM Plex Sans Arabic, sans-serif",
       "brand": "brand, sans-serif",
       "sans-serif": "sans-serif"
     },

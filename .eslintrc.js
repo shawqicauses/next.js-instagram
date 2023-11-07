@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT
+// DONE REVIEWING: GITHUB COMMIT ⚠️
 const eslintConfig = {
   extends: [
     "next/core-web-vitals",
@@ -28,6 +28,8 @@ const eslintConfig = {
     "prefer-arrow-callback": "off",
     "prefer-destructuring": "error",
     "import/extensions": ["error", {ts: "never", tsx: "never"}],
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
     "react/jsx-filename-extension": ["error", {extensions: [".ts", ".tsx"]}],
     "react/jsx-fragments": "off",
     "react/jsx-props-no-spreading": "off",

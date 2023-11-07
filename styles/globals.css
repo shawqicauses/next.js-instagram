@@ -1,4 +1,4 @@
-/* DONE REVIEWING: GITHUB COMMIT ⚔️ */
+/* DONE REVIEWING: GITHUB COMMIT ⚠️ */
 /* IF: You do not want to use Tailwind */
 /* DELETE: Every @tailwind rule */
 
@@ -29,4 +29,26 @@
   font-family: brand;
   font-weight: 900;
   src: url("/black.ttf");
+}
+
+@layer components {
+  @media (max-width: 30rem) {
+    .container {
+      max-width: initial;
+    }
+  }
+}
+
+@layer utilities {
+  .sh-flex {
+    @apply flex w-full items-center justify-center gap-3;
+  }
+
+  .sh-flex-start {
+    @apply flex w-full items-start justify-start gap-3;
+  }
+
+  .sh-flex-col {
+    @apply flex w-full flex-col items-start justify-start gap-3;
+  }
 }
