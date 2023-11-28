@@ -1,9 +1,17 @@
-// DONE REVIEWING: GITHUB COMMIT ⚠️
+// DONE REVIEWING: GITHUB COMMIT 🛰️
 import {Dispatch, SetStateAction} from "react"
 
 /* eslint no-unused-vars: "off" */
-export type Dimensions = "square" | "landscape" | "portrait"
-export type DimensionsClasses = {width: 67.5; height: 35.375 | 67.5 | 84.375}
+export type Dimensions =
+  | "square"
+  | "landscape"
+  | "portrait"
+  | "story"
+  | "avatar"
+export type DimensionsClasses = {
+  width: 67.5
+  height: 35.375 | 67.5 | 84.375 | 120
+}
 
 export type Positions = "top" | "middle" | "bottom"
 export type PositionsClasses = "mt-auto" | "my-auto" | "mb-auto"

@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT ⚠️
+// DONE REVIEWING: GITHUB COMMIT 🛰️
 import {ReactElement, createContext, useContext, useMemo, useState} from "react"
 import {
   alignsClasses,
@@ -109,8 +109,9 @@ interface IContentProps {
 
 const Content = function Content({children}: IContentProps) {
   const {dimension, background, isBackgroundImage} = useContext(Context)
-  const classes =
-    "relative z-20 flex h-full max-h-[49.375rem] w-full max-w-[55rem] flex-col items-center justify-center gap-10 p-[calc(2.5rem-0.125rem)]"
+  const classes = `relative z-20 flex h-full max-h-[49.375rem] w-full ${
+    dimension === "story" ? "max-w-full" : "max-w-[55rem]"
+  } flex-col items-center justify-center gap-10 p-[calc(2.5rem-0.125rem)]`
 
   return isBackgroundImage ? (
     <div
@@ -128,14 +129,22 @@ const Content = function Content({children}: IContentProps) {
 }
 
 const Heading = function Heading() {
-  const {heading} = useContext(Context)
+  const {dimension, heading} = useContext(Context)
+  const fontClasses =
+    dimension === "avatar"
+      ? "font-semi-bold text-[20rem] leading-none"
+      : dimension === "story"
+      ? "font-medium text-xl-6 leading-[2]"
+      : "font-bold text-xl-7 leading-[9rem]"
+
   return heading.value ? (
     <h1
       className={[
-        "bg-text text-xl-7 font-black leading-[9rem]",
+        "bg-text",
         textsClasses[heading.color],
         positionsClasses[heading.position],
-        alignsClasses[heading.align]
+        alignsClasses[heading.align],
+        fontClasses
       ].join(" ")}>
       <span
         className={[

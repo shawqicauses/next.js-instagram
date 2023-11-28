@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT ⚠️
+// DONE REVIEWING: GITHUB COMMIT 🛰️
 import {
   Aligns,
   AlignsClasses,
@@ -15,13 +15,17 @@ import {
 export const dimensions: {id: ID; value: Dimensions}[] = [
   {id: 0, value: "square"},
   {id: 1, value: "landscape"},
-  {id: 2, value: "portrait"}
+  {id: 2, value: "portrait"},
+  {id: 3, value: "story"},
+  {id: 4, value: "avatar"}
 ]
 
 export const dimensionsClasses: {[key: string]: DimensionsClasses} = {
   square: {width: 67.5, height: 67.5},
   landscape: {width: 67.5, height: 35.375},
-  portrait: {width: 67.5, height: 84.375}
+  portrait: {width: 67.5, height: 84.375},
+  story: {width: 67.5, height: 120},
+  avatar: {width: 67.5, height: 67.5}
 }
 
 export const positions: {id: ID; value: Positions}[] = [

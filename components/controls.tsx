@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT ⚠️
+// DONE REVIEWING: GITHUB COMMIT 🛰️
 import DomToImage from "dom-to-image"
 import {useContext} from "react"
 import {aligns, backgrounds, dimensions, positions} from "../helpers/data"
@@ -46,12 +46,12 @@ export const Controls = function Controls() {
           <h3 className="text-lg font-normal leading-none text-stone-950">
             Heading
           </h3>
-          <div>
-            <input
-              type="text"
+          <div className="w-full">
+            <textarea
               id="heading-value"
               name="heading-value"
-              className="input"
+              rows={8}
+              className="input w-full"
               onChange={({currentTarget: {value}}) =>
                 setHeading((previous) => ({...previous, value}))
               }
