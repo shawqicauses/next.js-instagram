@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 🛰️
+// DONE REVIEWING: GITHUB COMMIT ♾️
 import DomToImage from "dom-to-image"
 import {useContext} from "react"
 import {aligns, backgrounds, dimensions, positions} from "../helpers/data"
@@ -18,9 +18,9 @@ export const Controls = function Controls() {
     setHeading
   } = useContext(Context)
 
-  const pngDownload = function pngDownload() {
+  const download = function download(format: "toPng" | "toJpeg") {
     const node = document.getElementById(id.toString()) as Node
-    DomToImage.toPng(node).then((value) => {
+    DomToImage[format](node).then((value) => {
       const anchorElement = document.createElement("a")
       anchorElement.href = value
       anchorElement.download = id.toString()
@@ -146,8 +146,16 @@ export const Controls = function Controls() {
               <button
                 type="button"
                 className="button button-secondary"
-                onClick={pngDownload}>
+                onClick={() => download("toPng")}>
                 PNG
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                className="button button-secondary"
+                onClick={() => download("toJpeg")}>
+                JPEG
               </button>
             </li>
           </ul>
