@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT ♾️
+// DONE REVIEWING: GITHUB COMMIT 🔓
 import {Fragment} from "react"
 import {Frame} from "../components/frame"
 
@@ -10,14 +10,14 @@ const IndexPage = function IndexPage() {
           <Frame id="instagram-post">
             <Fragment>
               <Frame.Controls />
-              <div className="sh-flex h-full w-full flex-col overflow-scroll">
+              <div className="h-full w-full overflow-scroll">
                 <Frame.Post>
                   <Frame.Post.Content>
                     <Frame.Post.Heading />
                   </Frame.Post.Content>
                 </Frame.Post>
-                <Frame.Dimension />
               </div>
+              <Frame.Dimension />
             </Fragment>
           </Frame>
         </div>

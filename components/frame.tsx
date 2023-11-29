@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 🛰️
+// DONE REVIEWING: GITHUB COMMIT 🔓
 import {ReactElement, createContext, useContext, useMemo, useState} from "react"
 import {
   alignsClasses,
@@ -83,7 +83,7 @@ interface IPostProps {
 const Post = function Post({children}: IPostProps) {
   const {id, dimension, background, isBackgroundImage} = useContext(Context)
   return (
-    <div className="sh-flex !w-max border border-stone-200">
+    <div className="sh-flex mx-auto !w-max border border-stone-200">
       <div
         id={id.toString()}
         className={[
@@ -160,7 +160,7 @@ const Heading = function Heading() {
 const Dimension = function Dimension() {
   const {dimension} = useContext(Context)
   return (
-    <p className="font-medium leading-none text-stone-950">
+    <p className="my-5 text-center font-medium leading-none text-stone-950">
       W: {dimensionsClasses[dimension].width * 16} / H:{" "}
       {dimensionsClasses[dimension].height * 16}
     </p>
